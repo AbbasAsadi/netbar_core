@@ -1,36 +1,45 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:netbar_core/core/api/dio_error_handler_delegate.dart';
 import 'package:netbar_core/core/api/http_config.dart';
 import 'package:netbar_core/core/api/log_error.dart';
+import 'package:netbar_core/core/api/token_provider.dart';
+
+import 'base_api_error_handler_delegate.dart';
 
 class DioInterceptor extends QueuedInterceptor {
-  final String? token;
+  final TokenProvider? tokenProvider;
   final String? apiVersion;
   final String deviceID;
-  final DioErrorHandlerDelegate delegate;
+  final BaseApiErrorHandlerDelegate delegate;
 
   DioInterceptor({
     required this.deviceID,
     required this.delegate,
-    this.token,
+    this.tokenProvider,
     this.apiVersion,
   });
 
   @override
   Future onRequest(RequestOptions options, RequestInterceptorHandler handler) async {
+    // if (options.extra[HttpConfig.needAuthentication] != null) {
+    //   final bool needAuthentication = options.extra[HttpConfig.needAuthentication] as bool;
+    //   if (needAuthentication) {
+    //     debugPrint(token);
+    //     if (token.isNotEmpty) {
+    //       // debugPrint(token);
+    //       options.headers['Authorization'] = 'Bearer $token';
+    //     }
+    //   }
+    // }
     if (options.extra[HttpConfig.needAuthentication] == true &&
-        token?.isNotEmpty == true) {
-      options.headers['Authorization'] = 'Bearer $token';
+        tokenProvider?.token?.isNotEmpty == true) {
+      options.headers['Authorization'] = 'Bearer ${tokenProvider?.token}';
     }
-
     options.headers['content-type'] = HttpConfig.contentType;
+    options.headers['Accept-Language'] = HttpConfig.acceptLanguage;
+    options.headers['api-version'] = apiVersion ?? HttpConfig.apiVersion;
     options.headers['DeviceId'] = deviceID;
-
-    if (apiVersion != null) {
-      options.headers['api-version'] = apiVersion;
-    }
 
     return handler.next(options);
   }
@@ -62,6 +71,5 @@ class DioInterceptor extends QueuedInterceptor {
   }
 
   static bool connectivityLost(DioException err) =>
-      err.type == DioExceptionType.unknown &&
-          err.error is SocketException;
+      err.type == DioExceptionType.unknown && err.error is SocketException;
 }

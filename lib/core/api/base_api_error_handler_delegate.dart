@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 
-abstract class DioErrorHandlerDelegate {
+abstract class BaseApiErrorHandlerDelegate {
   void onServerError(DioException err);
 
   Future<void> onUnauthorized(DioException err, ErrorInterceptorHandler handler);

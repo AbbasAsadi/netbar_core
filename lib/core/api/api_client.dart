@@ -1,16 +1,17 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:netbar_core/core/api/api_process_extension.dart';
 import 'package:netbar_core/core/api/base_http_method_adapter.dart';
-import 'package:netbar_core/core/api/dio_error_handler.dart';
 import 'package:netbar_core/core/api/http_config.dart';
+import 'package:netbar_core/core/api/token_provider.dart';
 import 'package:netbar_core/core/helper/typedef.dart';
 import 'package:netbar_core/core/model/failure/core_failure.dart';
 
-class DioProvider implements BaseHttpMethodAdapter {
-  final Dio _dio;
-  final String? token;
+class ApiClient implements BaseHttpMethodAdapter {
+  final Dio dio;
+  final TokenProvider tokenProvider;
 
-  DioProvider(this._dio, this.token);
+  ApiClient({required this.dio, required this.tokenProvider});
 
   @override
   Future<Either<CoreFailure, T>> get<T>({
@@ -19,9 +20,9 @@ class DioProvider implements BaseHttpMethodAdapter {
     required NetworkDataParser<T> dataParser,
     bool loginRequired = true,
   }) async {
-    if ((!loginRequired) || (loginRequired && (token?.isNotEmpty ?? false))) {
+    if ((!loginRequired) || (loginRequired && (tokenProvider.token?.isNotEmpty ?? false))) {
       try {
-        final res = await _dio.get(
+        final res = await dio.get(
           url,
           queryParameters: queryParameters,
           options: Options(extra: {HttpConfig.needAuthentication: loginRequired}),
@@ -45,7 +46,7 @@ class DioProvider implements BaseHttpMethodAdapter {
     // final token = _getUserToken;
     // if ((!loginRequired) || (loginRequired && token.isNotEmpty)) {
     try {
-      final res = await _dio.post(
+      final res = await dio.post(
         url,
         data: body,
         options: Options(extra: {HttpConfig.needAuthentication: loginRequired}),
@@ -66,9 +67,9 @@ class DioProvider implements BaseHttpMethodAdapter {
     Object? body,
     bool loginRequired = true,
   }) async {
-    if ((!loginRequired) || (loginRequired && (token?.isNotEmpty ?? false))) {
+    if ((!loginRequired) || (loginRequired && (tokenProvider.token?.isNotEmpty ?? false))) {
       try {
-        final res = await _dio.put(
+        final res = await dio.put(
           url,
           data: body,
           options: Options(extra: {HttpConfig.needAuthentication: loginRequired}),
@@ -90,9 +91,9 @@ class DioProvider implements BaseHttpMethodAdapter {
     required NetworkDataParser<T> dataParser,
     bool loginRequired = true,
   }) async {
-    if ((!loginRequired) || (loginRequired && (token?.isNotEmpty ?? false))) {
+    if ((!loginRequired) || (loginRequired && (tokenProvider.token?.isNotEmpty ?? false))) {
       try {
-        final res = await _dio.delete(
+        final res = await dio.delete(
           url,
           queryParameters: queryParameters,
           data: body,

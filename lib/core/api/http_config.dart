@@ -3,10 +3,12 @@ import 'dart:io';
 class HttpConfig {
   static const String needAuthentication = 'needAuthentication';
   static const String contentType = 'application/json';
+  static const String acceptLanguage = 'fa-IR';
+  static const String apiVersion = '3.0';
   static const int connectTimeoutInSecond = 45;
 }
 
-class MyHttpOverrides extends HttpOverrides {
+class NetbarHttpOverride extends HttpOverrides {
   @override
   HttpClient createHttpClient(SecurityContext? context) {
     return super.createHttpClient(context)

@@ -6,7 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:netbar_core/core/helper/typedef.dart';
 import 'package:netbar_core/core/model/failure/core_failure.dart';
 
-extension DioProcessRequestErrorX on DioException {
+extension ApiProcessRequestExtension on DioException {
   CoreFailure processRequestError() {
     if (type == DioExceptionType.unknown && error != null && error is SocketException) {
       return const CoreFailure.lostConnection();
@@ -40,7 +40,7 @@ extension DioProcessRequestErrorX on DioException {
   }
 }
 
-extension DioProcessResponseX on Response<dynamic> {
+extension DioProcessResponseExtension on Response<dynamic> {
   Future<Either<CoreFailure, T>> processResponseData<T>({
     required NetworkDataParser<T> dataParser,
   }) async {

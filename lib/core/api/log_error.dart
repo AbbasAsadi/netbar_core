@@ -7,7 +7,7 @@ class LogError {
     log('\n\n');
     log('/*/*/*/*/*/*/*/*/*/*/*/* ${error.response?.statusCode} */*/*/*/*/*/*/*/*/*/*/*/');
     log('ROOT: ${error.requestOptions.path}');
-    log('MESSAGE: ${error.message}');
+    log('MESSAGE: ${error.message.toString()}');
     log(
       '/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/',
     );
