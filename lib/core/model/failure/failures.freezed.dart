@@ -54,9 +54,7 @@ mixin _$ValueFailure<T> {
     TResult Function(T failedValue)? invalidNationalCodeAndPostalCode,
     TResult Function(T failedValue)? invalidNationalCode,
     required TResult orElse(),
-}) =>
-throw
-_privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(EmptyField<T> value) emptyField,
@@ -94,15 +92,14 @@ _privateConstructorUsedError;
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode
-,
+    invalidNationalCodeAndPostalCode,
     TResult Function(InvalidNationalCode<T> value)? invalidNationalCode,
     required TResult orElse(),
-}) => throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ValueFailureCopyWith<T, ValueFailure<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -110,9 +107,9 @@ invalidNationalCodeAndPostalCode
 /// @nodoc
 abstract class $ValueFailureCopyWith<T, $Res> {
   factory $ValueFailureCopyWith(
-  ValueFailure<T> value,
-  $Res Function(ValueFailure<T>) then,
-) = _$ValueFailureCopyWithImpl<T, $Res, ValueFailure<T>>;
+    ValueFailure<T> value,
+    $Res Function(ValueFailure<T>) then,
+  ) = _$ValueFailureCopyWithImpl<T, $Res, ValueFailure<T>>;
   @useResult
   $Res call({T failedValue});
 }
@@ -127,20 +124,20 @@ class _$ValueFailureCopyWithImpl<T, $Res, $Val extends ValueFailure<T>>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({Object? failedValue = freezed}) {
-return _then(
-_value.copyWith(
-failedValue: freezed == failedValue
-? _value.failedValue
-    : failedValue // ignore: cast_nullable_to_non_nullable
-as T,
-)
-as $Val,
-);
+    return _then(
+      _value.copyWith(
+            failedValue: freezed == failedValue
+                ? _value.failedValue
+                : failedValue // ignore: cast_nullable_to_non_nullable
+                      as T,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -148,9 +145,9 @@ as $Val,
 abstract class _$$EmptyFieldImplCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   factory _$$EmptyFieldImplCopyWith(
-  _$EmptyFieldImpl<T> value,
-  $Res Function(_$EmptyFieldImpl<T>) then,
-) = __$$EmptyFieldImplCopyWithImpl<T, $Res>;
+    _$EmptyFieldImpl<T> value,
+    $Res Function(_$EmptyFieldImpl<T>) then,
+  ) = __$$EmptyFieldImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({T failedValue});
@@ -161,23 +158,23 @@ class __$$EmptyFieldImplCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res, _$EmptyFieldImpl<T>>
     implements _$$EmptyFieldImplCopyWith<T, $Res> {
   __$$EmptyFieldImplCopyWithImpl(
-  _$EmptyFieldImpl<T> _value,
-  $Res Function(_$EmptyFieldImpl<T>) _then,
-) : super(_value, _then);
+    _$EmptyFieldImpl<T> _value,
+    $Res Function(_$EmptyFieldImpl<T>) _then,
+  ) : super(_value, _then);
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-$Res call({Object? failedValue = freezed}) {
-return _then(
-_$EmptyFieldImpl<T>(
-failedValue: freezed == failedValue
-? _value.failedValue
-    : failedValue // ignore: cast_nullable_to_non_nullable
-as T,
-),
-);
+  $Res call({Object? failedValue = freezed}) {
+    return _then(
+      _$EmptyFieldImpl<T>(
+        failedValue: freezed == failedValue
+            ? _value.failedValue
+            : failedValue // ignore: cast_nullable_to_non_nullable
+                  as T,
+      ),
+    );
   }
 }
 
@@ -209,21 +206,21 @@ class _$EmptyFieldImpl<T>
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EmptyFieldImpl<T> &&
-const DeepCollectionEquality().equals(
-other.failedValue,
-failedValue,
-));
+            const DeepCollectionEquality().equals(
+              other.failedValue,
+              failedValue,
+            ));
   }
 
   @override
   int get hashCode => Object.hash(
-runtimeType,
-const DeepCollectionEquality().hash(failedValue),
-);
+    runtimeType,
+    const DeepCollectionEquality().hash(failedValue),
+  );
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EmptyFieldImplCopyWith<T, _$EmptyFieldImpl<T>> get copyWith =>
@@ -286,14 +283,14 @@ const DeepCollectionEquality().hash(failedValue),
   TResult map<TResult extends Object?>({
     required TResult Function(EmptyField<T> value) emptyField,
     required TResult Function(ProvinceAndCityEmpty<T> value)
-provinceAndCityEmpty,
+    provinceAndCityEmpty,
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidPhoneNumber<T> value) invalidPhoneNumber,
     required TResult Function(InvalidBirthDay<T> value) invalidBirthDay,
     required TResult Function(InvalidEmail<T> value) invalidEmail,
     required TResult Function(InvalidOtpCode<T> value) invalidOtpCode,
     required TResult Function(InvalidNationalCodeAndPostalCode<T> value)
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     required TResult Function(InvalidNationalCode<T> value) invalidNationalCode,
   }) {
     return emptyField(this);
@@ -310,7 +307,7 @@ invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
     TResult? Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult? Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidNationalCode<T> value)? invalidNationalCode,
   }) {
     return emptyField?.call(this);
@@ -327,7 +324,7 @@ invalidNationalCodeAndPostalCode,
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult Function(InvalidNationalCode<T> value)? invalidNationalCode,
     required TResult orElse(),
   }) {
@@ -345,10 +342,10 @@ abstract class EmptyField<T> implements ValueFailure<T> {
   @override
   T get failedValue;
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @override
-@JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EmptyFieldImplCopyWith<T, _$EmptyFieldImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -357,9 +354,9 @@ abstract class EmptyField<T> implements ValueFailure<T> {
 abstract class _$$ProvinceAndCityEmptyImplCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   factory _$$ProvinceAndCityEmptyImplCopyWith(
-  _$ProvinceAndCityEmptyImpl<T> value,
-  $Res Function(_$ProvinceAndCityEmptyImpl<T>) then,
-) = __$$ProvinceAndCityEmptyImplCopyWithImpl<T, $Res>;
+    _$ProvinceAndCityEmptyImpl<T> value,
+    $Res Function(_$ProvinceAndCityEmptyImpl<T>) then,
+  ) = __$$ProvinceAndCityEmptyImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({T failedValue});
@@ -369,24 +366,24 @@ abstract class _$$ProvinceAndCityEmptyImplCopyWith<T, $Res>
 class __$$ProvinceAndCityEmptyImplCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res, _$ProvinceAndCityEmptyImpl<T>>
     implements _$$ProvinceAndCityEmptyImplCopyWith<T, $Res> {
-__$$ProvinceAndCityEmptyImplCopyWithImpl(
-_$ProvinceAndCityEmptyImpl<T> _value,
-$Res Function(_$ProvinceAndCityEmptyImpl<T>) _then,
-) : super(_value, _then);
+  __$$ProvinceAndCityEmptyImplCopyWithImpl(
+    _$ProvinceAndCityEmptyImpl<T> _value,
+    $Res Function(_$ProvinceAndCityEmptyImpl<T>) _then,
+  ) : super(_value, _then);
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-$Res call({Object? failedValue = freezed}) {
-return _then(
-_$ProvinceAndCityEmptyImpl<T>(
-failedValue: freezed == failedValue
-? _value.failedValue
-    : failedValue // ignore: cast_nullable_to_non_nullable
-as T,
-),
-);
+  $Res call({Object? failedValue = freezed}) {
+    return _then(
+      _$ProvinceAndCityEmptyImpl<T>(
+        failedValue: freezed == failedValue
+            ? _value.failedValue
+            : failedValue // ignore: cast_nullable_to_non_nullable
+                  as T,
+      ),
+    );
   }
 }
 
@@ -410,8 +407,8 @@ class _$ProvinceAndCityEmptyImpl<T>
     super.debugFillProperties(properties);
     properties
       ..add(
-DiagnosticsProperty('type', 'ValueFailure<$T>.provinceAndCityEmpty'),
-)
+        DiagnosticsProperty('type', 'ValueFailure<$T>.provinceAndCityEmpty'),
+      )
       ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
@@ -420,29 +417,29 @@ DiagnosticsProperty('type', 'ValueFailure<$T>.provinceAndCityEmpty'),
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProvinceAndCityEmptyImpl<T> &&
-const DeepCollectionEquality().equals(
-other.failedValue,
-failedValue,
-));
+            const DeepCollectionEquality().equals(
+              other.failedValue,
+              failedValue,
+            ));
   }
 
   @override
   int get hashCode => Object.hash(
-runtimeType,
-const DeepCollectionEquality().hash(failedValue),
-);
+    runtimeType,
+    const DeepCollectionEquality().hash(failedValue),
+  );
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ProvinceAndCityEmptyImplCopyWith<T, _$ProvinceAndCityEmptyImpl<T>>
-get copyWith =>
-__$$ProvinceAndCityEmptyImplCopyWithImpl<
-T,
-_$ProvinceAndCityEmptyImpl<T>
->(this, _$identity);
+  get copyWith =>
+      __$$ProvinceAndCityEmptyImplCopyWithImpl<
+        T,
+        _$ProvinceAndCityEmptyImpl<T>
+      >(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -501,14 +498,14 @@ _$ProvinceAndCityEmptyImpl<T>
   TResult map<TResult extends Object?>({
     required TResult Function(EmptyField<T> value) emptyField,
     required TResult Function(ProvinceAndCityEmpty<T> value)
-provinceAndCityEmpty,
+    provinceAndCityEmpty,
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidPhoneNumber<T> value) invalidPhoneNumber,
     required TResult Function(InvalidBirthDay<T> value) invalidBirthDay,
     required TResult Function(InvalidEmail<T> value) invalidEmail,
     required TResult Function(InvalidOtpCode<T> value) invalidOtpCode,
     required TResult Function(InvalidNationalCodeAndPostalCode<T> value)
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     required TResult Function(InvalidNationalCode<T> value) invalidNationalCode,
   }) {
     return provinceAndCityEmpty(this);
@@ -525,7 +522,7 @@ invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
     TResult? Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult? Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidNationalCode<T> value)? invalidNationalCode,
   }) {
     return provinceAndCityEmpty?.call(this);
@@ -542,7 +539,7 @@ invalidNationalCodeAndPostalCode,
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult Function(InvalidNationalCode<T> value)? invalidNationalCode,
     required TResult orElse(),
   }) {
@@ -560,21 +557,21 @@ abstract class ProvinceAndCityEmpty<T> implements ValueFailure<T> {
   @override
   T get failedValue;
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @override
-@JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ProvinceAndCityEmptyImplCopyWith<T, _$ProvinceAndCityEmptyImpl<T>>
-get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ExceedingLengthImplCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-factory _$$ExceedingLengthImplCopyWith(
-_$ExceedingLengthImpl<T> value,
-$Res Function(_$ExceedingLengthImpl<T>) then,
-) = __$$ExceedingLengthImplCopyWithImpl<T, $Res>;
+  factory _$$ExceedingLengthImplCopyWith(
+    _$ExceedingLengthImpl<T> value,
+    $Res Function(_$ExceedingLengthImpl<T>) then,
+  ) = __$$ExceedingLengthImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({T failedValue, int max});
@@ -584,28 +581,28 @@ $Res Function(_$ExceedingLengthImpl<T>) then,
 class __$$ExceedingLengthImplCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res, _$ExceedingLengthImpl<T>>
     implements _$$ExceedingLengthImplCopyWith<T, $Res> {
-__$$ExceedingLengthImplCopyWithImpl(
-_$ExceedingLengthImpl<T> _value,
-$Res Function(_$ExceedingLengthImpl<T>) _then,
-) : super(_value, _then);
+  __$$ExceedingLengthImplCopyWithImpl(
+    _$ExceedingLengthImpl<T> _value,
+    $Res Function(_$ExceedingLengthImpl<T>) _then,
+  ) : super(_value, _then);
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-$Res call({Object? failedValue = freezed, Object? max = null}) {
-return _then(
-_$ExceedingLengthImpl<T>(
-failedValue: freezed == failedValue
-? _value.failedValue
-    : failedValue // ignore: cast_nullable_to_non_nullable
-as T,
-max: null == max
-? _value.max
-    : max // ignore: cast_nullable_to_non_nullable
-as int,
-),
-);
+  $Res call({Object? failedValue = freezed, Object? max = null}) {
+    return _then(
+      _$ExceedingLengthImpl<T>(
+        failedValue: freezed == failedValue
+            ? _value.failedValue
+            : failedValue // ignore: cast_nullable_to_non_nullable
+                  as T,
+        max: null == max
+            ? _value.max
+            : max // ignore: cast_nullable_to_non_nullable
+                  as int,
+      ),
+    );
   }
 }
 
@@ -640,30 +637,30 @@ class _$ExceedingLengthImpl<T>
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ExceedingLengthImpl<T> &&
-const DeepCollectionEquality().equals(
-other.failedValue,
-failedValue,
-) &&
+            const DeepCollectionEquality().equals(
+              other.failedValue,
+              failedValue,
+            ) &&
             (identical(other.max, max) || other.max == max));
   }
 
   @override
   int get hashCode => Object.hash(
-runtimeType,
-const DeepCollectionEquality().hash(failedValue),
-max,
-);
+    runtimeType,
+    const DeepCollectionEquality().hash(failedValue),
+    max,
+  );
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ExceedingLengthImplCopyWith<T, _$ExceedingLengthImpl<T>> get copyWith =>
       __$$ExceedingLengthImplCopyWithImpl<T, _$ExceedingLengthImpl<T>>(
-this,
-_$identity,
-);
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
@@ -722,14 +719,14 @@ _$identity,
   TResult map<TResult extends Object?>({
     required TResult Function(EmptyField<T> value) emptyField,
     required TResult Function(ProvinceAndCityEmpty<T> value)
-provinceAndCityEmpty,
+    provinceAndCityEmpty,
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidPhoneNumber<T> value) invalidPhoneNumber,
     required TResult Function(InvalidBirthDay<T> value) invalidBirthDay,
     required TResult Function(InvalidEmail<T> value) invalidEmail,
     required TResult Function(InvalidOtpCode<T> value) invalidOtpCode,
     required TResult Function(InvalidNationalCodeAndPostalCode<T> value)
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     required TResult Function(InvalidNationalCode<T> value) invalidNationalCode,
   }) {
     return exceedingLength(this);
@@ -746,7 +743,7 @@ invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
     TResult? Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult? Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidNationalCode<T> value)? invalidNationalCode,
   }) {
     return exceedingLength?.call(this);
@@ -763,7 +760,7 @@ invalidNationalCodeAndPostalCode,
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult Function(InvalidNationalCode<T> value)? invalidNationalCode,
     required TResult orElse(),
   }) {
@@ -775,19 +772,19 @@ invalidNationalCodeAndPostalCode,
 }
 
 abstract class ExceedingLength<T> implements ValueFailure<T> {
-const factory ExceedingLength({
-required final T failedValue,
-required final int max,
-}) = _$ExceedingLengthImpl<T>;
+  const factory ExceedingLength({
+    required final T failedValue,
+    required final int max,
+  }) = _$ExceedingLengthImpl<T>;
 
   @override
   T get failedValue;
   int get max;
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @override
-@JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ExceedingLengthImplCopyWith<T, _$ExceedingLengthImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -795,10 +792,10 @@ required final int max,
 /// @nodoc
 abstract class _$$InvalidPhoneNumberImplCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-factory _$$InvalidPhoneNumberImplCopyWith(
-_$InvalidPhoneNumberImpl<T> value,
-$Res Function(_$InvalidPhoneNumberImpl<T>) then,
-) = __$$InvalidPhoneNumberImplCopyWithImpl<T, $Res>;
+  factory _$$InvalidPhoneNumberImplCopyWith(
+    _$InvalidPhoneNumberImpl<T> value,
+    $Res Function(_$InvalidPhoneNumberImpl<T>) then,
+  ) = __$$InvalidPhoneNumberImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({T failedValue});
@@ -808,24 +805,24 @@ $Res Function(_$InvalidPhoneNumberImpl<T>) then,
 class __$$InvalidPhoneNumberImplCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidPhoneNumberImpl<T>>
     implements _$$InvalidPhoneNumberImplCopyWith<T, $Res> {
-__$$InvalidPhoneNumberImplCopyWithImpl(
-_$InvalidPhoneNumberImpl<T> _value,
-$Res Function(_$InvalidPhoneNumberImpl<T>) _then,
-) : super(_value, _then);
+  __$$InvalidPhoneNumberImplCopyWithImpl(
+    _$InvalidPhoneNumberImpl<T> _value,
+    $Res Function(_$InvalidPhoneNumberImpl<T>) _then,
+  ) : super(_value, _then);
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-$Res call({Object? failedValue = freezed}) {
-return _then(
-_$InvalidPhoneNumberImpl<T>(
-failedValue: freezed == failedValue
-? _value.failedValue
-    : failedValue // ignore: cast_nullable_to_non_nullable
-as T,
-),
-);
+  $Res call({Object? failedValue = freezed}) {
+    return _then(
+      _$InvalidPhoneNumberImpl<T>(
+        failedValue: freezed == failedValue
+            ? _value.failedValue
+            : failedValue // ignore: cast_nullable_to_non_nullable
+                  as T,
+      ),
+    );
   }
 }
 
@@ -857,29 +854,29 @@ class _$InvalidPhoneNumberImpl<T>
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InvalidPhoneNumberImpl<T> &&
-const DeepCollectionEquality().equals(
-other.failedValue,
-failedValue,
-));
+            const DeepCollectionEquality().equals(
+              other.failedValue,
+              failedValue,
+            ));
   }
 
   @override
   int get hashCode => Object.hash(
-runtimeType,
-const DeepCollectionEquality().hash(failedValue),
-);
+    runtimeType,
+    const DeepCollectionEquality().hash(failedValue),
+  );
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InvalidPhoneNumberImplCopyWith<T, _$InvalidPhoneNumberImpl<T>>
-get copyWith =>
-__$$InvalidPhoneNumberImplCopyWithImpl<T, _$InvalidPhoneNumberImpl<T>>(
-this,
-_$identity,
-);
+  get copyWith =>
+      __$$InvalidPhoneNumberImplCopyWithImpl<T, _$InvalidPhoneNumberImpl<T>>(
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
@@ -938,14 +935,14 @@ _$identity,
   TResult map<TResult extends Object?>({
     required TResult Function(EmptyField<T> value) emptyField,
     required TResult Function(ProvinceAndCityEmpty<T> value)
-provinceAndCityEmpty,
+    provinceAndCityEmpty,
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidPhoneNumber<T> value) invalidPhoneNumber,
     required TResult Function(InvalidBirthDay<T> value) invalidBirthDay,
     required TResult Function(InvalidEmail<T> value) invalidEmail,
     required TResult Function(InvalidOtpCode<T> value) invalidOtpCode,
     required TResult Function(InvalidNationalCodeAndPostalCode<T> value)
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     required TResult Function(InvalidNationalCode<T> value) invalidNationalCode,
   }) {
     return invalidPhoneNumber(this);
@@ -962,7 +959,7 @@ invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
     TResult? Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult? Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidNationalCode<T> value)? invalidNationalCode,
   }) {
     return invalidPhoneNumber?.call(this);
@@ -979,7 +976,7 @@ invalidNationalCodeAndPostalCode,
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult Function(InvalidNationalCode<T> value)? invalidNationalCode,
     required TResult orElse(),
   }) {
@@ -997,21 +994,21 @@ abstract class InvalidPhoneNumber<T> implements ValueFailure<T> {
   @override
   T get failedValue;
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @override
-@JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InvalidPhoneNumberImplCopyWith<T, _$InvalidPhoneNumberImpl<T>>
-get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$InvalidBirthDayImplCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-factory _$$InvalidBirthDayImplCopyWith(
-_$InvalidBirthDayImpl<T> value,
-$Res Function(_$InvalidBirthDayImpl<T>) then,
-) = __$$InvalidBirthDayImplCopyWithImpl<T, $Res>;
+  factory _$$InvalidBirthDayImplCopyWith(
+    _$InvalidBirthDayImpl<T> value,
+    $Res Function(_$InvalidBirthDayImpl<T>) then,
+  ) = __$$InvalidBirthDayImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({T failedValue});
@@ -1021,24 +1018,24 @@ $Res Function(_$InvalidBirthDayImpl<T>) then,
 class __$$InvalidBirthDayImplCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidBirthDayImpl<T>>
     implements _$$InvalidBirthDayImplCopyWith<T, $Res> {
-__$$InvalidBirthDayImplCopyWithImpl(
-_$InvalidBirthDayImpl<T> _value,
-$Res Function(_$InvalidBirthDayImpl<T>) _then,
-) : super(_value, _then);
+  __$$InvalidBirthDayImplCopyWithImpl(
+    _$InvalidBirthDayImpl<T> _value,
+    $Res Function(_$InvalidBirthDayImpl<T>) _then,
+  ) : super(_value, _then);
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-$Res call({Object? failedValue = freezed}) {
-return _then(
-_$InvalidBirthDayImpl<T>(
-failedValue: freezed == failedValue
-? _value.failedValue
-    : failedValue // ignore: cast_nullable_to_non_nullable
-as T,
-),
-);
+  $Res call({Object? failedValue = freezed}) {
+    return _then(
+      _$InvalidBirthDayImpl<T>(
+        failedValue: freezed == failedValue
+            ? _value.failedValue
+            : failedValue // ignore: cast_nullable_to_non_nullable
+                  as T,
+      ),
+    );
   }
 }
 
@@ -1070,28 +1067,28 @@ class _$InvalidBirthDayImpl<T>
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InvalidBirthDayImpl<T> &&
-const DeepCollectionEquality().equals(
-other.failedValue,
-failedValue,
-));
+            const DeepCollectionEquality().equals(
+              other.failedValue,
+              failedValue,
+            ));
   }
 
   @override
   int get hashCode => Object.hash(
-runtimeType,
-const DeepCollectionEquality().hash(failedValue),
-);
+    runtimeType,
+    const DeepCollectionEquality().hash(failedValue),
+  );
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InvalidBirthDayImplCopyWith<T, _$InvalidBirthDayImpl<T>> get copyWith =>
       __$$InvalidBirthDayImplCopyWithImpl<T, _$InvalidBirthDayImpl<T>>(
-this,
-_$identity,
-);
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
@@ -1150,14 +1147,14 @@ _$identity,
   TResult map<TResult extends Object?>({
     required TResult Function(EmptyField<T> value) emptyField,
     required TResult Function(ProvinceAndCityEmpty<T> value)
-provinceAndCityEmpty,
+    provinceAndCityEmpty,
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidPhoneNumber<T> value) invalidPhoneNumber,
     required TResult Function(InvalidBirthDay<T> value) invalidBirthDay,
     required TResult Function(InvalidEmail<T> value) invalidEmail,
     required TResult Function(InvalidOtpCode<T> value) invalidOtpCode,
     required TResult Function(InvalidNationalCodeAndPostalCode<T> value)
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     required TResult Function(InvalidNationalCode<T> value) invalidNationalCode,
   }) {
     return invalidBirthDay(this);
@@ -1174,7 +1171,7 @@ invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
     TResult? Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult? Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidNationalCode<T> value)? invalidNationalCode,
   }) {
     return invalidBirthDay?.call(this);
@@ -1191,7 +1188,7 @@ invalidNationalCodeAndPostalCode,
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult Function(InvalidNationalCode<T> value)? invalidNationalCode,
     required TResult orElse(),
   }) {
@@ -1209,10 +1206,10 @@ abstract class InvalidBirthDay<T> implements ValueFailure<T> {
   @override
   T get failedValue;
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @override
-@JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InvalidBirthDayImplCopyWith<T, _$InvalidBirthDayImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1220,10 +1217,10 @@ abstract class InvalidBirthDay<T> implements ValueFailure<T> {
 /// @nodoc
 abstract class _$$InvalidEmailImplCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-factory _$$InvalidEmailImplCopyWith(
-_$InvalidEmailImpl<T> value,
-$Res Function(_$InvalidEmailImpl<T>) then,
-) = __$$InvalidEmailImplCopyWithImpl<T, $Res>;
+  factory _$$InvalidEmailImplCopyWith(
+    _$InvalidEmailImpl<T> value,
+    $Res Function(_$InvalidEmailImpl<T>) then,
+  ) = __$$InvalidEmailImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({T failedValue});
@@ -1234,23 +1231,23 @@ class __$$InvalidEmailImplCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidEmailImpl<T>>
     implements _$$InvalidEmailImplCopyWith<T, $Res> {
   __$$InvalidEmailImplCopyWithImpl(
-  _$InvalidEmailImpl<T> _value,
-  $Res Function(_$InvalidEmailImpl<T>) _then,
-) : super(_value, _then);
+    _$InvalidEmailImpl<T> _value,
+    $Res Function(_$InvalidEmailImpl<T>) _then,
+  ) : super(_value, _then);
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-$Res call({Object? failedValue = freezed}) {
-return _then(
-_$InvalidEmailImpl<T>(
-failedValue: freezed == failedValue
-? _value.failedValue
-    : failedValue // ignore: cast_nullable_to_non_nullable
-as T,
-),
-);
+  $Res call({Object? failedValue = freezed}) {
+    return _then(
+      _$InvalidEmailImpl<T>(
+        failedValue: freezed == failedValue
+            ? _value.failedValue
+            : failedValue // ignore: cast_nullable_to_non_nullable
+                  as T,
+      ),
+    );
   }
 }
 
@@ -1282,28 +1279,28 @@ class _$InvalidEmailImpl<T>
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InvalidEmailImpl<T> &&
-const DeepCollectionEquality().equals(
-other.failedValue,
-failedValue,
-));
+            const DeepCollectionEquality().equals(
+              other.failedValue,
+              failedValue,
+            ));
   }
 
   @override
   int get hashCode => Object.hash(
-runtimeType,
-const DeepCollectionEquality().hash(failedValue),
-);
+    runtimeType,
+    const DeepCollectionEquality().hash(failedValue),
+  );
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InvalidEmailImplCopyWith<T, _$InvalidEmailImpl<T>> get copyWith =>
       __$$InvalidEmailImplCopyWithImpl<T, _$InvalidEmailImpl<T>>(
-this,
-_$identity,
-);
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
@@ -1362,14 +1359,14 @@ _$identity,
   TResult map<TResult extends Object?>({
     required TResult Function(EmptyField<T> value) emptyField,
     required TResult Function(ProvinceAndCityEmpty<T> value)
-provinceAndCityEmpty,
+    provinceAndCityEmpty,
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidPhoneNumber<T> value) invalidPhoneNumber,
     required TResult Function(InvalidBirthDay<T> value) invalidBirthDay,
     required TResult Function(InvalidEmail<T> value) invalidEmail,
     required TResult Function(InvalidOtpCode<T> value) invalidOtpCode,
     required TResult Function(InvalidNationalCodeAndPostalCode<T> value)
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     required TResult Function(InvalidNationalCode<T> value) invalidNationalCode,
   }) {
     return invalidEmail(this);
@@ -1386,7 +1383,7 @@ invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
     TResult? Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult? Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidNationalCode<T> value)? invalidNationalCode,
   }) {
     return invalidEmail?.call(this);
@@ -1403,7 +1400,7 @@ invalidNationalCodeAndPostalCode,
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult Function(InvalidNationalCode<T> value)? invalidNationalCode,
     required TResult orElse(),
   }) {
@@ -1421,10 +1418,10 @@ abstract class InvalidEmail<T> implements ValueFailure<T> {
   @override
   T get failedValue;
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @override
-@JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InvalidEmailImplCopyWith<T, _$InvalidEmailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1432,10 +1429,10 @@ abstract class InvalidEmail<T> implements ValueFailure<T> {
 /// @nodoc
 abstract class _$$InvalidOtpCodeImplCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-factory _$$InvalidOtpCodeImplCopyWith(
-_$InvalidOtpCodeImpl<T> value,
-$Res Function(_$InvalidOtpCodeImpl<T>) then,
-) = __$$InvalidOtpCodeImplCopyWithImpl<T, $Res>;
+  factory _$$InvalidOtpCodeImplCopyWith(
+    _$InvalidOtpCodeImpl<T> value,
+    $Res Function(_$InvalidOtpCodeImpl<T>) then,
+  ) = __$$InvalidOtpCodeImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({T failedValue});
@@ -1445,24 +1442,24 @@ $Res Function(_$InvalidOtpCodeImpl<T>) then,
 class __$$InvalidOtpCodeImplCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidOtpCodeImpl<T>>
     implements _$$InvalidOtpCodeImplCopyWith<T, $Res> {
-__$$InvalidOtpCodeImplCopyWithImpl(
-_$InvalidOtpCodeImpl<T> _value,
-$Res Function(_$InvalidOtpCodeImpl<T>) _then,
-) : super(_value, _then);
+  __$$InvalidOtpCodeImplCopyWithImpl(
+    _$InvalidOtpCodeImpl<T> _value,
+    $Res Function(_$InvalidOtpCodeImpl<T>) _then,
+  ) : super(_value, _then);
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-$Res call({Object? failedValue = freezed}) {
-return _then(
-_$InvalidOtpCodeImpl<T>(
-failedValue: freezed == failedValue
-? _value.failedValue
-    : failedValue // ignore: cast_nullable_to_non_nullable
-as T,
-),
-);
+  $Res call({Object? failedValue = freezed}) {
+    return _then(
+      _$InvalidOtpCodeImpl<T>(
+        failedValue: freezed == failedValue
+            ? _value.failedValue
+            : failedValue // ignore: cast_nullable_to_non_nullable
+                  as T,
+      ),
+    );
   }
 }
 
@@ -1494,28 +1491,28 @@ class _$InvalidOtpCodeImpl<T>
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InvalidOtpCodeImpl<T> &&
-const DeepCollectionEquality().equals(
-other.failedValue,
-failedValue,
-));
+            const DeepCollectionEquality().equals(
+              other.failedValue,
+              failedValue,
+            ));
   }
 
   @override
   int get hashCode => Object.hash(
-runtimeType,
-const DeepCollectionEquality().hash(failedValue),
-);
+    runtimeType,
+    const DeepCollectionEquality().hash(failedValue),
+  );
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InvalidOtpCodeImplCopyWith<T, _$InvalidOtpCodeImpl<T>> get copyWith =>
       __$$InvalidOtpCodeImplCopyWithImpl<T, _$InvalidOtpCodeImpl<T>>(
-this,
-_$identity,
-);
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
@@ -1574,14 +1571,14 @@ _$identity,
   TResult map<TResult extends Object?>({
     required TResult Function(EmptyField<T> value) emptyField,
     required TResult Function(ProvinceAndCityEmpty<T> value)
-provinceAndCityEmpty,
+    provinceAndCityEmpty,
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidPhoneNumber<T> value) invalidPhoneNumber,
     required TResult Function(InvalidBirthDay<T> value) invalidBirthDay,
     required TResult Function(InvalidEmail<T> value) invalidEmail,
     required TResult Function(InvalidOtpCode<T> value) invalidOtpCode,
     required TResult Function(InvalidNationalCodeAndPostalCode<T> value)
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     required TResult Function(InvalidNationalCode<T> value) invalidNationalCode,
   }) {
     return invalidOtpCode(this);
@@ -1598,7 +1595,7 @@ invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
     TResult? Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult? Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidNationalCode<T> value)? invalidNationalCode,
   }) {
     return invalidOtpCode?.call(this);
@@ -1615,7 +1612,7 @@ invalidNationalCodeAndPostalCode,
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult Function(InvalidNationalCode<T> value)? invalidNationalCode,
     required TResult orElse(),
   }) {
@@ -1633,10 +1630,10 @@ abstract class InvalidOtpCode<T> implements ValueFailure<T> {
   @override
   T get failedValue;
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @override
-@JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InvalidOtpCodeImplCopyWith<T, _$InvalidOtpCodeImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1645,9 +1642,9 @@ abstract class InvalidOtpCode<T> implements ValueFailure<T> {
 abstract class _$$InvalidNationalCodeAndPostalCodeImplCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   factory _$$InvalidNationalCodeAndPostalCodeImplCopyWith(
-  _$InvalidNationalCodeAndPostalCodeImpl<T> value,
-  $Res Function(_$InvalidNationalCodeAndPostalCodeImpl<T>) then,
-) = __$$InvalidNationalCodeAndPostalCodeImplCopyWithImpl<T, $Res>;
+    _$InvalidNationalCodeAndPostalCodeImpl<T> value,
+    $Res Function(_$InvalidNationalCodeAndPostalCodeImpl<T>) then,
+  ) = __$$InvalidNationalCodeAndPostalCodeImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({T failedValue});
@@ -1655,31 +1652,31 @@ abstract class _$$InvalidNationalCodeAndPostalCodeImplCopyWith<T, $Res>
 
 /// @nodoc
 class __$$InvalidNationalCodeAndPostalCodeImplCopyWithImpl<T, $Res>
-extends
-_$ValueFailureCopyWithImpl<
-T,
-$Res,
-_$InvalidNationalCodeAndPostalCodeImpl<T>
->
+    extends
+        _$ValueFailureCopyWithImpl<
+          T,
+          $Res,
+          _$InvalidNationalCodeAndPostalCodeImpl<T>
+        >
     implements _$$InvalidNationalCodeAndPostalCodeImplCopyWith<T, $Res> {
   __$$InvalidNationalCodeAndPostalCodeImplCopyWithImpl(
-  _$InvalidNationalCodeAndPostalCodeImpl<T> _value,
-  $Res Function(_$InvalidNationalCodeAndPostalCodeImpl<T>) _then,
-) : super(_value, _then);
+    _$InvalidNationalCodeAndPostalCodeImpl<T> _value,
+    $Res Function(_$InvalidNationalCodeAndPostalCodeImpl<T>) _then,
+  ) : super(_value, _then);
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-$Res call({Object? failedValue = freezed}) {
-return _then(
-_$InvalidNationalCodeAndPostalCodeImpl<T>(
-failedValue: freezed == failedValue
-? _value.failedValue
-    : failedValue // ignore: cast_nullable_to_non_nullable
-as T,
-),
-);
+  $Res call({Object? failedValue = freezed}) {
+    return _then(
+      _$InvalidNationalCodeAndPostalCodeImpl<T>(
+        failedValue: freezed == failedValue
+            ? _value.failedValue
+            : failedValue // ignore: cast_nullable_to_non_nullable
+                  as T,
+      ),
+    );
   }
 }
 
@@ -1702,12 +1699,12 @@ class _$InvalidNationalCodeAndPostalCodeImpl<T>
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-    ..add(
-DiagnosticsProperty(
-'type',
-'ValueFailure<$T>.invalidNationalCodeAndPostalCode',
-),
-)
+      ..add(
+        DiagnosticsProperty(
+          'type',
+          'ValueFailure<$T>.invalidNationalCodeAndPostalCode',
+        ),
+      )
       ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
@@ -1716,32 +1713,32 @@ DiagnosticsProperty(
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InvalidNationalCodeAndPostalCodeImpl<T> &&
-const DeepCollectionEquality().equals(
-other.failedValue,
-failedValue,
-));
+            const DeepCollectionEquality().equals(
+              other.failedValue,
+              failedValue,
+            ));
   }
 
   @override
   int get hashCode => Object.hash(
-runtimeType,
-const DeepCollectionEquality().hash(failedValue),
-);
+    runtimeType,
+    const DeepCollectionEquality().hash(failedValue),
+  );
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-_$$InvalidNationalCodeAndPostalCodeImplCopyWith<
-T,
-_$InvalidNationalCodeAndPostalCodeImpl<T>
->
-get copyWith =>
-__$$InvalidNationalCodeAndPostalCodeImplCopyWithImpl<
-T,
-_$InvalidNationalCodeAndPostalCodeImpl<T>
->(this, _$identity);
+  _$$InvalidNationalCodeAndPostalCodeImplCopyWith<
+    T,
+    _$InvalidNationalCodeAndPostalCodeImpl<T>
+  >
+  get copyWith =>
+      __$$InvalidNationalCodeAndPostalCodeImplCopyWithImpl<
+        T,
+        _$InvalidNationalCodeAndPostalCodeImpl<T>
+      >(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1800,14 +1797,14 @@ _$InvalidNationalCodeAndPostalCodeImpl<T>
   TResult map<TResult extends Object?>({
     required TResult Function(EmptyField<T> value) emptyField,
     required TResult Function(ProvinceAndCityEmpty<T> value)
-provinceAndCityEmpty,
+    provinceAndCityEmpty,
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidPhoneNumber<T> value) invalidPhoneNumber,
     required TResult Function(InvalidBirthDay<T> value) invalidBirthDay,
     required TResult Function(InvalidEmail<T> value) invalidEmail,
     required TResult Function(InvalidOtpCode<T> value) invalidOtpCode,
     required TResult Function(InvalidNationalCodeAndPostalCode<T> value)
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     required TResult Function(InvalidNationalCode<T> value) invalidNationalCode,
   }) {
     return invalidNationalCodeAndPostalCode(this);
@@ -1824,7 +1821,7 @@ invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
     TResult? Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult? Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidNationalCode<T> value)? invalidNationalCode,
   }) {
     return invalidNationalCodeAndPostalCode?.call(this);
@@ -1841,7 +1838,7 @@ invalidNationalCodeAndPostalCode,
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult Function(InvalidNationalCode<T> value)? invalidNationalCode,
     required TResult orElse(),
   }) {
@@ -1853,31 +1850,31 @@ invalidNationalCodeAndPostalCode,
 }
 
 abstract class InvalidNationalCodeAndPostalCode<T> implements ValueFailure<T> {
-const factory InvalidNationalCodeAndPostalCode({
-required final T failedValue,
-}) = _$InvalidNationalCodeAndPostalCodeImpl<T>;
+  const factory InvalidNationalCodeAndPostalCode({
+    required final T failedValue,
+  }) = _$InvalidNationalCodeAndPostalCodeImpl<T>;
 
   @override
   T get failedValue;
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @override
-@JsonKey(includeFromJson: false, includeToJson: false)
-_$$InvalidNationalCodeAndPostalCodeImplCopyWith<
-T,
-_$InvalidNationalCodeAndPostalCodeImpl<T>
->
-get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$InvalidNationalCodeAndPostalCodeImplCopyWith<
+    T,
+    _$InvalidNationalCodeAndPostalCodeImpl<T>
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$InvalidNationalCodeImplCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-factory _$$InvalidNationalCodeImplCopyWith(
-_$InvalidNationalCodeImpl<T> value,
-$Res Function(_$InvalidNationalCodeImpl<T>) then,
-) = __$$InvalidNationalCodeImplCopyWithImpl<T, $Res>;
+  factory _$$InvalidNationalCodeImplCopyWith(
+    _$InvalidNationalCodeImpl<T> value,
+    $Res Function(_$InvalidNationalCodeImpl<T>) then,
+  ) = __$$InvalidNationalCodeImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({T failedValue});
@@ -1887,24 +1884,24 @@ $Res Function(_$InvalidNationalCodeImpl<T>) then,
 class __$$InvalidNationalCodeImplCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidNationalCodeImpl<T>>
     implements _$$InvalidNationalCodeImplCopyWith<T, $Res> {
-__$$InvalidNationalCodeImplCopyWithImpl(
-_$InvalidNationalCodeImpl<T> _value,
-$Res Function(_$InvalidNationalCodeImpl<T>) _then,
-) : super(_value, _then);
+  __$$InvalidNationalCodeImplCopyWithImpl(
+    _$InvalidNationalCodeImpl<T> _value,
+    $Res Function(_$InvalidNationalCodeImpl<T>) _then,
+  ) : super(_value, _then);
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-$Res call({Object? failedValue = freezed}) {
-return _then(
-_$InvalidNationalCodeImpl<T>(
-failedValue: freezed == failedValue
-? _value.failedValue
-    : failedValue // ignore: cast_nullable_to_non_nullable
-as T,
-),
-);
+  $Res call({Object? failedValue = freezed}) {
+    return _then(
+      _$InvalidNationalCodeImpl<T>(
+        failedValue: freezed == failedValue
+            ? _value.failedValue
+            : failedValue // ignore: cast_nullable_to_non_nullable
+                  as T,
+      ),
+    );
   }
 }
 
@@ -1936,29 +1933,29 @@ class _$InvalidNationalCodeImpl<T>
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InvalidNationalCodeImpl<T> &&
-const DeepCollectionEquality().equals(
-other.failedValue,
-failedValue,
-));
+            const DeepCollectionEquality().equals(
+              other.failedValue,
+              failedValue,
+            ));
   }
 
   @override
   int get hashCode => Object.hash(
-runtimeType,
-const DeepCollectionEquality().hash(failedValue),
-);
+    runtimeType,
+    const DeepCollectionEquality().hash(failedValue),
+  );
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InvalidNationalCodeImplCopyWith<T, _$InvalidNationalCodeImpl<T>>
-get copyWith =>
-__$$InvalidNationalCodeImplCopyWithImpl<T, _$InvalidNationalCodeImpl<T>>(
-this,
-_$identity,
-);
+  get copyWith =>
+      __$$InvalidNationalCodeImplCopyWithImpl<T, _$InvalidNationalCodeImpl<T>>(
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
@@ -2017,14 +2014,14 @@ _$identity,
   TResult map<TResult extends Object?>({
     required TResult Function(EmptyField<T> value) emptyField,
     required TResult Function(ProvinceAndCityEmpty<T> value)
-provinceAndCityEmpty,
+    provinceAndCityEmpty,
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidPhoneNumber<T> value) invalidPhoneNumber,
     required TResult Function(InvalidBirthDay<T> value) invalidBirthDay,
     required TResult Function(InvalidEmail<T> value) invalidEmail,
     required TResult Function(InvalidOtpCode<T> value) invalidOtpCode,
     required TResult Function(InvalidNationalCodeAndPostalCode<T> value)
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     required TResult Function(InvalidNationalCode<T> value) invalidNationalCode,
   }) {
     return invalidNationalCode(this);
@@ -2041,7 +2038,7 @@ invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidEmail<T> value)? invalidEmail,
     TResult? Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult? Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult? Function(InvalidNationalCode<T> value)? invalidNationalCode,
   }) {
     return invalidNationalCode?.call(this);
@@ -2058,7 +2055,7 @@ invalidNationalCodeAndPostalCode,
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(InvalidOtpCode<T> value)? invalidOtpCode,
     TResult Function(InvalidNationalCodeAndPostalCode<T> value)?
-invalidNationalCodeAndPostalCode,
+    invalidNationalCodeAndPostalCode,
     TResult Function(InvalidNationalCode<T> value)? invalidNationalCode,
     required TResult orElse(),
   }) {
@@ -2076,10 +2073,10 @@ abstract class InvalidNationalCode<T> implements ValueFailure<T> {
   @override
   T get failedValue;
 
-/// Create a copy of ValueFailure
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of ValueFailure
+  /// with the given fields replaced by the non-null parameter values.
   @override
-@JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InvalidNationalCodeImplCopyWith<T, _$InvalidNationalCodeImpl<T>>
-get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

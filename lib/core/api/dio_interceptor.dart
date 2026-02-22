@@ -62,9 +62,9 @@ class DioInterceptor extends QueuedInterceptor {
       case 423:
         delegate.onBlocked();
         break;
-      case 451:
-        delegate.onLegalRestriction();
-        break;
+      // case 451:
+      //   delegate.onLegalRestriction(lastPath: err.requestOptions.baseUrl + err.requestOptions.path);
+      //   break;
     }
 
     return handler.reject(err);

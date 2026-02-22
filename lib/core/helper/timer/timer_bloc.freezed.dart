@@ -35,9 +35,7 @@ mixin _$TimerEvent {
     TResult Function()? reset,
     TResult Function(int duration)? ticked,
     required TResult orElse(),
-}) =>
-throw
-_privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(TimerEventStarted value) started,
@@ -56,15 +54,15 @@ _privateConstructorUsedError;
     TResult Function(TimerEventReset value)? reset,
     TResult Function(TimerEventTicked value)? ticked,
     required TResult orElse(),
-}) => throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $TimerEventCopyWith<$Res> {
   factory $TimerEventCopyWith(
-  TimerEvent value,
-  $Res Function(TimerEvent) then,
-) = _$TimerEventCopyWithImpl<$Res, TimerEvent>;
+    TimerEvent value,
+    $Res Function(TimerEvent) then,
+  ) = _$TimerEventCopyWithImpl<$Res, TimerEvent>;
 }
 
 /// @nodoc
@@ -77,16 +75,16 @@ class _$TimerEventCopyWithImpl<$Res, $Val extends TimerEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-/// Create a copy of TimerEvent
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of TimerEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$TimerEventStartedImplCopyWith<$Res> {
-factory _$$TimerEventStartedImplCopyWith(
-_$TimerEventStartedImpl value,
-$Res Function(_$TimerEventStartedImpl) then,
-) = __$$TimerEventStartedImplCopyWithImpl<$Res>;
+  factory _$$TimerEventStartedImplCopyWith(
+    _$TimerEventStartedImpl value,
+    $Res Function(_$TimerEventStartedImpl) then,
+  ) = __$$TimerEventStartedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int initialDuration});
 }
@@ -95,24 +93,24 @@ $Res Function(_$TimerEventStartedImpl) then,
 class __$$TimerEventStartedImplCopyWithImpl<$Res>
     extends _$TimerEventCopyWithImpl<$Res, _$TimerEventStartedImpl>
     implements _$$TimerEventStartedImplCopyWith<$Res> {
-__$$TimerEventStartedImplCopyWithImpl(
-_$TimerEventStartedImpl _value,
-$Res Function(_$TimerEventStartedImpl) _then,
-) : super(_value, _then);
+  __$$TimerEventStartedImplCopyWithImpl(
+    _$TimerEventStartedImpl _value,
+    $Res Function(_$TimerEventStartedImpl) _then,
+  ) : super(_value, _then);
 
-/// Create a copy of TimerEvent
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of TimerEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-$Res call({Object? initialDuration = null}) {
-return _then(
-_$TimerEventStartedImpl(
-initialDuration: null == initialDuration
-? _value.initialDuration
-    : initialDuration // ignore: cast_nullable_to_non_nullable
-as int,
-),
-);
+  $Res call({Object? initialDuration = null}) {
+    return _then(
+      _$TimerEventStartedImpl(
+        initialDuration: null == initialDuration
+            ? _value.initialDuration
+            : initialDuration // ignore: cast_nullable_to_non_nullable
+                  as int,
+      ),
+    );
   }
 }
 
@@ -141,16 +139,16 @@ class _$TimerEventStartedImpl implements TimerEventStarted {
   @override
   int get hashCode => Object.hash(runtimeType, initialDuration);
 
-/// Create a copy of TimerEvent
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
+  /// Create a copy of TimerEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TimerEventStartedImplCopyWith<_$TimerEventStartedImpl> get copyWith =>
       __$$TimerEventStartedImplCopyWithImpl<_$TimerEventStartedImpl>(
-this,
-_$identity,
-);
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
@@ -227,19 +225,19 @@ abstract class TimerEventStarted implements TimerEvent {
 
   int get initialDuration;
 
-/// Create a copy of TimerEvent
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
+  /// Create a copy of TimerEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TimerEventStartedImplCopyWith<_$TimerEventStartedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$TimerEventResetImplCopyWith<$Res> {
-factory _$$TimerEventResetImplCopyWith(
-_$TimerEventResetImpl value,
-$Res Function(_$TimerEventResetImpl) then,
-) = __$$TimerEventResetImplCopyWithImpl<$Res>;
+  factory _$$TimerEventResetImplCopyWith(
+    _$TimerEventResetImpl value,
+    $Res Function(_$TimerEventResetImpl) then,
+  ) = __$$TimerEventResetImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -247,12 +245,12 @@ class __$$TimerEventResetImplCopyWithImpl<$Res>
     extends _$TimerEventCopyWithImpl<$Res, _$TimerEventResetImpl>
     implements _$$TimerEventResetImplCopyWith<$Res> {
   __$$TimerEventResetImplCopyWithImpl(
-  _$TimerEventResetImpl _value,
-  $Res Function(_$TimerEventResetImpl) _then,
-) : super(_value, _then);
+    _$TimerEventResetImpl _value,
+    $Res Function(_$TimerEventResetImpl) _then,
+  ) : super(_value, _then);
 
-/// Create a copy of TimerEvent
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of TimerEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -349,10 +347,10 @@ abstract class TimerEventReset implements TimerEvent {
 
 /// @nodoc
 abstract class _$$TimerEventTickedImplCopyWith<$Res> {
-factory _$$TimerEventTickedImplCopyWith(
-_$TimerEventTickedImpl value,
-$Res Function(_$TimerEventTickedImpl) then,
-) = __$$TimerEventTickedImplCopyWithImpl<$Res>;
+  factory _$$TimerEventTickedImplCopyWith(
+    _$TimerEventTickedImpl value,
+    $Res Function(_$TimerEventTickedImpl) then,
+  ) = __$$TimerEventTickedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int duration});
 }
@@ -361,24 +359,24 @@ $Res Function(_$TimerEventTickedImpl) then,
 class __$$TimerEventTickedImplCopyWithImpl<$Res>
     extends _$TimerEventCopyWithImpl<$Res, _$TimerEventTickedImpl>
     implements _$$TimerEventTickedImplCopyWith<$Res> {
-__$$TimerEventTickedImplCopyWithImpl(
-_$TimerEventTickedImpl _value,
-$Res Function(_$TimerEventTickedImpl) _then,
-) : super(_value, _then);
+  __$$TimerEventTickedImplCopyWithImpl(
+    _$TimerEventTickedImpl _value,
+    $Res Function(_$TimerEventTickedImpl) _then,
+  ) : super(_value, _then);
 
-/// Create a copy of TimerEvent
-/// with the given fields replaced by the non-null parameter values.
+  /// Create a copy of TimerEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-$Res call({Object? duration = null}) {
-return _then(
-_$TimerEventTickedImpl(
-duration: null == duration
-? _value.duration
-    : duration // ignore: cast_nullable_to_non_nullable
-as int,
-),
-);
+  $Res call({Object? duration = null}) {
+    return _then(
+      _$TimerEventTickedImpl(
+        duration: null == duration
+            ? _value.duration
+            : duration // ignore: cast_nullable_to_non_nullable
+                  as int,
+      ),
+    );
   }
 }
 
@@ -407,16 +405,16 @@ class _$TimerEventTickedImpl implements TimerEventTicked {
   @override
   int get hashCode => Object.hash(runtimeType, duration);
 
-/// Create a copy of TimerEvent
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
+  /// Create a copy of TimerEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TimerEventTickedImplCopyWith<_$TimerEventTickedImpl> get copyWith =>
       __$$TimerEventTickedImplCopyWithImpl<_$TimerEventTickedImpl>(
-this,
-_$identity,
-);
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
@@ -493,9 +491,9 @@ abstract class TimerEventTicked implements TimerEvent {
 
   int get duration;
 
-/// Create a copy of TimerEvent
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
+  /// Create a copy of TimerEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TimerEventTickedImplCopyWith<_$TimerEventTickedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
