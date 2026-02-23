@@ -20,8 +20,6 @@ extension ApiProcessRequestExtension on DioException {
         return const CoreFailure.notAuthenticated();
       } else if (response?.statusCode == 402) {
         return const CoreFailure.noActiveSubscription();
-      } else if (response?.statusCode == 451) {
-        return const CoreFailure.userNeedVerification();
       } else {
         dynamic data;
         try {

@@ -7,5 +7,5 @@ abstract class BaseApiErrorHandlerDelegate {
 
   void onBlocked();
 
-  // void onLegalRestriction({required String lastPath});
+  void onLegalRestriction({required String lastPath});
 }

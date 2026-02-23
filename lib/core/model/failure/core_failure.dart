@@ -16,5 +16,4 @@ class CoreFailure with _$CoreFailure {
 
   const factory CoreFailure.noActiveSubscription() = NoActiveSubscription;
 
-  const factory CoreFailure.userNeedVerification() = UserNeedVerification;
 }

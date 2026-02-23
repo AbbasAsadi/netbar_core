@@ -24,7 +24,6 @@ mixin _$CoreFailure {
     required TResult Function(int? statusCode, String? errorMessage) extraError,
     required TResult Function() notAuthenticated,
     required TResult Function() noActiveSubscription,
-    required TResult Function() userNeedVerification,
   }) => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
@@ -34,7 +33,6 @@ mixin _$CoreFailure {
     TResult? Function(int? statusCode, String? errorMessage)? extraError,
     TResult? Function()? notAuthenticated,
     TResult? Function()? noActiveSubscription,
-    TResult? Function()? userNeedVerification,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
@@ -48,8 +46,6 @@ mixin _$CoreFailure {
 
     TResult Function()? noActiveSubscription,
 
-    TResult Function()? userNeedVerification,
-
     required TResult orElse(),
   }) => throw _privateConstructorUsedError;
 
@@ -60,7 +56,6 @@ mixin _$CoreFailure {
     required TResult Function(_ExtraError value) extraError,
     required TResult Function(NotAuthenticated value) notAuthenticated,
     required TResult Function(NoActiveSubscription value) noActiveSubscription,
-    required TResult Function(UserNeedVerification value) userNeedVerification,
   }) => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
@@ -70,7 +65,6 @@ mixin _$CoreFailure {
     TResult? Function(_ExtraError value)? extraError,
     TResult? Function(NotAuthenticated value)? notAuthenticated,
     TResult? Function(NoActiveSubscription value)? noActiveSubscription,
-    TResult? Function(UserNeedVerification value)? userNeedVerification,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
@@ -79,7 +73,6 @@ mixin _$CoreFailure {
     TResult Function(_ExtraError value)? extraError,
     TResult Function(NotAuthenticated value)? notAuthenticated,
     TResult Function(NoActiveSubscription value)? noActiveSubscription,
-    TResult Function(UserNeedVerification value)? userNeedVerification,
     required TResult orElse(),
   }) => throw _privateConstructorUsedError;
 }
@@ -150,7 +143,6 @@ class _$ServerErrorImpl extends _ServerError {
     required TResult Function(int? statusCode, String? errorMessage) extraError,
     required TResult Function() notAuthenticated,
     required TResult Function() noActiveSubscription,
-    required TResult Function() userNeedVerification,
   }) {
     return serverError();
   }
@@ -163,7 +155,6 @@ class _$ServerErrorImpl extends _ServerError {
     TResult? Function(int? statusCode, String? errorMessage)? extraError,
     TResult? Function()? notAuthenticated,
     TResult? Function()? noActiveSubscription,
-    TResult? Function()? userNeedVerification,
   }) {
     return serverError?.call();
   }
@@ -176,7 +167,6 @@ class _$ServerErrorImpl extends _ServerError {
     TResult Function(int? statusCode, String? errorMessage)? extraError,
     TResult Function()? notAuthenticated,
     TResult Function()? noActiveSubscription,
-    TResult Function()? userNeedVerification,
     required TResult orElse(),
   }) {
     if (serverError != null) {
@@ -193,7 +183,6 @@ class _$ServerErrorImpl extends _ServerError {
     required TResult Function(_ExtraError value) extraError,
     required TResult Function(NotAuthenticated value) notAuthenticated,
     required TResult Function(NoActiveSubscription value) noActiveSubscription,
-    required TResult Function(UserNeedVerification value) userNeedVerification,
   }) {
     return serverError(this);
   }
@@ -206,7 +195,6 @@ class _$ServerErrorImpl extends _ServerError {
     TResult? Function(_ExtraError value)? extraError,
     TResult? Function(NotAuthenticated value)? notAuthenticated,
     TResult? Function(NoActiveSubscription value)? noActiveSubscription,
-    TResult? Function(UserNeedVerification value)? userNeedVerification,
   }) {
     return serverError?.call(this);
   }
@@ -219,7 +207,6 @@ class _$ServerErrorImpl extends _ServerError {
     TResult Function(_ExtraError value)? extraError,
     TResult Function(NotAuthenticated value)? notAuthenticated,
     TResult Function(NoActiveSubscription value)? noActiveSubscription,
-    TResult Function(UserNeedVerification value)? userNeedVerification,
     required TResult orElse(),
   }) {
     if (serverError != null) {
@@ -282,7 +269,6 @@ class _$LostConnectionImpl extends _LostConnection {
     required TResult Function(int? statusCode, String? errorMessage) extraError,
     required TResult Function() notAuthenticated,
     required TResult Function() noActiveSubscription,
-    required TResult Function() userNeedVerification,
   }) {
     return lostConnection();
   }
@@ -295,7 +281,6 @@ class _$LostConnectionImpl extends _LostConnection {
     TResult? Function(int? statusCode, String? errorMessage)? extraError,
     TResult? Function()? notAuthenticated,
     TResult? Function()? noActiveSubscription,
-    TResult? Function()? userNeedVerification,
   }) {
     return lostConnection?.call();
   }
@@ -308,7 +293,6 @@ class _$LostConnectionImpl extends _LostConnection {
     TResult Function(int? statusCode, String? errorMessage)? extraError,
     TResult Function()? notAuthenticated,
     TResult Function()? noActiveSubscription,
-    TResult Function()? userNeedVerification,
     required TResult orElse(),
   }) {
     if (lostConnection != null) {
@@ -325,7 +309,6 @@ class _$LostConnectionImpl extends _LostConnection {
     required TResult Function(_ExtraError value) extraError,
     required TResult Function(NotAuthenticated value) notAuthenticated,
     required TResult Function(NoActiveSubscription value) noActiveSubscription,
-    required TResult Function(UserNeedVerification value) userNeedVerification,
   }) {
     return lostConnection(this);
   }
@@ -338,7 +321,6 @@ class _$LostConnectionImpl extends _LostConnection {
     TResult? Function(_ExtraError value)? extraError,
     TResult? Function(NotAuthenticated value)? notAuthenticated,
     TResult? Function(NoActiveSubscription value)? noActiveSubscription,
-    TResult? Function(UserNeedVerification value)? userNeedVerification,
   }) {
     return lostConnection?.call(this);
   }
@@ -351,7 +333,6 @@ class _$LostConnectionImpl extends _LostConnection {
     TResult Function(_ExtraError value)? extraError,
     TResult Function(NotAuthenticated value)? notAuthenticated,
     TResult Function(NoActiveSubscription value)? noActiveSubscription,
-    TResult Function(UserNeedVerification value)? userNeedVerification,
     required TResult orElse(),
   }) {
     if (lostConnection != null) {
@@ -443,7 +424,6 @@ class _$ExtraErrorImpl extends _ExtraError {
     required TResult Function(int? statusCode, String? errorMessage) extraError,
     required TResult Function() notAuthenticated,
     required TResult Function() noActiveSubscription,
-    required TResult Function() userNeedVerification,
   }) {
     return extraError(statusCode, errorMessage);
   }
@@ -456,7 +436,6 @@ class _$ExtraErrorImpl extends _ExtraError {
     TResult? Function(int? statusCode, String? errorMessage)? extraError,
     TResult? Function()? notAuthenticated,
     TResult? Function()? noActiveSubscription,
-    TResult? Function()? userNeedVerification,
   }) {
     return extraError?.call(statusCode, errorMessage);
   }
@@ -469,7 +448,6 @@ class _$ExtraErrorImpl extends _ExtraError {
     TResult Function(int? statusCode, String? errorMessage)? extraError,
     TResult Function()? notAuthenticated,
     TResult Function()? noActiveSubscription,
-    TResult Function()? userNeedVerification,
     required TResult orElse(),
   }) {
     if (extraError != null) {
@@ -486,7 +464,6 @@ class _$ExtraErrorImpl extends _ExtraError {
     required TResult Function(_ExtraError value) extraError,
     required TResult Function(NotAuthenticated value) notAuthenticated,
     required TResult Function(NoActiveSubscription value) noActiveSubscription,
-    required TResult Function(UserNeedVerification value) userNeedVerification,
   }) {
     return extraError(this);
   }
@@ -499,7 +476,6 @@ class _$ExtraErrorImpl extends _ExtraError {
     TResult? Function(_ExtraError value)? extraError,
     TResult? Function(NotAuthenticated value)? notAuthenticated,
     TResult? Function(NoActiveSubscription value)? noActiveSubscription,
-    TResult? Function(UserNeedVerification value)? userNeedVerification,
   }) {
     return extraError?.call(this);
   }
@@ -512,7 +488,6 @@ class _$ExtraErrorImpl extends _ExtraError {
     TResult Function(_ExtraError value)? extraError,
     TResult Function(NotAuthenticated value)? notAuthenticated,
     TResult Function(NoActiveSubscription value)? noActiveSubscription,
-    TResult Function(UserNeedVerification value)? userNeedVerification,
     required TResult orElse(),
   }) {
     if (extraError != null) {
@@ -583,7 +558,6 @@ class _$NotAuthenticatedImpl extends NotAuthenticated {
     required TResult Function(int? statusCode, String? errorMessage) extraError,
     required TResult Function() notAuthenticated,
     required TResult Function() noActiveSubscription,
-    required TResult Function() userNeedVerification,
   }) {
     return notAuthenticated();
   }
@@ -596,7 +570,6 @@ class _$NotAuthenticatedImpl extends NotAuthenticated {
     TResult? Function(int? statusCode, String? errorMessage)? extraError,
     TResult? Function()? notAuthenticated,
     TResult? Function()? noActiveSubscription,
-    TResult? Function()? userNeedVerification,
   }) {
     return notAuthenticated?.call();
   }
@@ -609,7 +582,6 @@ class _$NotAuthenticatedImpl extends NotAuthenticated {
     TResult Function(int? statusCode, String? errorMessage)? extraError,
     TResult Function()? notAuthenticated,
     TResult Function()? noActiveSubscription,
-    TResult Function()? userNeedVerification,
     required TResult orElse(),
   }) {
     if (notAuthenticated != null) {
@@ -626,7 +598,6 @@ class _$NotAuthenticatedImpl extends NotAuthenticated {
     required TResult Function(_ExtraError value) extraError,
     required TResult Function(NotAuthenticated value) notAuthenticated,
     required TResult Function(NoActiveSubscription value) noActiveSubscription,
-    required TResult Function(UserNeedVerification value) userNeedVerification,
   }) {
     return notAuthenticated(this);
   }
@@ -639,7 +610,6 @@ class _$NotAuthenticatedImpl extends NotAuthenticated {
     TResult? Function(_ExtraError value)? extraError,
     TResult? Function(NotAuthenticated value)? notAuthenticated,
     TResult? Function(NoActiveSubscription value)? noActiveSubscription,
-    TResult? Function(UserNeedVerification value)? userNeedVerification,
   }) {
     return notAuthenticated?.call(this);
   }
@@ -652,7 +622,6 @@ class _$NotAuthenticatedImpl extends NotAuthenticated {
     TResult Function(_ExtraError value)? extraError,
     TResult Function(NotAuthenticated value)? notAuthenticated,
     TResult Function(NoActiveSubscription value)? noActiveSubscription,
-    TResult Function(UserNeedVerification value)? userNeedVerification,
     required TResult orElse(),
   }) {
     if (notAuthenticated != null) {
@@ -715,7 +684,6 @@ class _$NoActiveSubscriptionImpl extends NoActiveSubscription {
     required TResult Function(int? statusCode, String? errorMessage) extraError,
     required TResult Function() notAuthenticated,
     required TResult Function() noActiveSubscription,
-    required TResult Function() userNeedVerification,
   }) {
     return noActiveSubscription();
   }
@@ -728,7 +696,6 @@ class _$NoActiveSubscriptionImpl extends NoActiveSubscription {
     TResult? Function(int? statusCode, String? errorMessage)? extraError,
     TResult? Function()? notAuthenticated,
     TResult? Function()? noActiveSubscription,
-    TResult? Function()? userNeedVerification,
   }) {
     return noActiveSubscription?.call();
   }
@@ -741,7 +708,6 @@ class _$NoActiveSubscriptionImpl extends NoActiveSubscription {
     TResult Function(int? statusCode, String? errorMessage)? extraError,
     TResult Function()? notAuthenticated,
     TResult Function()? noActiveSubscription,
-    TResult Function()? userNeedVerification,
     required TResult orElse(),
   }) {
     if (noActiveSubscription != null) {
@@ -758,7 +724,6 @@ class _$NoActiveSubscriptionImpl extends NoActiveSubscription {
     required TResult Function(_ExtraError value) extraError,
     required TResult Function(NotAuthenticated value) notAuthenticated,
     required TResult Function(NoActiveSubscription value) noActiveSubscription,
-    required TResult Function(UserNeedVerification value) userNeedVerification,
   }) {
     return noActiveSubscription(this);
   }
@@ -771,7 +736,6 @@ class _$NoActiveSubscriptionImpl extends NoActiveSubscription {
     TResult? Function(_ExtraError value)? extraError,
     TResult? Function(NotAuthenticated value)? notAuthenticated,
     TResult? Function(NoActiveSubscription value)? noActiveSubscription,
-    TResult? Function(UserNeedVerification value)? userNeedVerification,
   }) {
     return noActiveSubscription?.call(this);
   }
@@ -784,7 +748,6 @@ class _$NoActiveSubscriptionImpl extends NoActiveSubscription {
     TResult Function(_ExtraError value)? extraError,
     TResult Function(NotAuthenticated value)? notAuthenticated,
     TResult Function(NoActiveSubscription value)? noActiveSubscription,
-    TResult Function(UserNeedVerification value)? userNeedVerification,
     required TResult orElse(),
   }) {
     if (noActiveSubscription != null) {
@@ -797,136 +760,4 @@ class _$NoActiveSubscriptionImpl extends NoActiveSubscription {
 abstract class NoActiveSubscription extends CoreFailure {
   const factory NoActiveSubscription() = _$NoActiveSubscriptionImpl;
   const NoActiveSubscription._() : super._();
-}
-
-/// @nodoc
-abstract class _$$UserNeedVerificationImplCopyWith<$Res> {
-  factory _$$UserNeedVerificationImplCopyWith(
-    _$UserNeedVerificationImpl value,
-    $Res Function(_$UserNeedVerificationImpl) then,
-  ) = __$$UserNeedVerificationImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$UserNeedVerificationImplCopyWithImpl<$Res>
-    extends _$CoreFailureCopyWithImpl<$Res, _$UserNeedVerificationImpl>
-    implements _$$UserNeedVerificationImplCopyWith<$Res> {
-  __$$UserNeedVerificationImplCopyWithImpl(
-    _$UserNeedVerificationImpl _value,
-    $Res Function(_$UserNeedVerificationImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of CoreFailure
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$UserNeedVerificationImpl extends UserNeedVerification {
-  const _$UserNeedVerificationImpl() : super._();
-
-  @override
-  String toString() {
-    return 'CoreFailure.userNeedVerification()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UserNeedVerificationImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() serverError,
-    required TResult Function() lostConnection,
-    required TResult Function(int? statusCode, String? errorMessage) extraError,
-    required TResult Function() notAuthenticated,
-    required TResult Function() noActiveSubscription,
-    required TResult Function() userNeedVerification,
-  }) {
-    return userNeedVerification();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? serverError,
-    TResult? Function()? lostConnection,
-    TResult? Function(int? statusCode, String? errorMessage)? extraError,
-    TResult? Function()? notAuthenticated,
-    TResult? Function()? noActiveSubscription,
-    TResult? Function()? userNeedVerification,
-  }) {
-    return userNeedVerification?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? serverError,
-    TResult Function()? lostConnection,
-    TResult Function(int? statusCode, String? errorMessage)? extraError,
-    TResult Function()? notAuthenticated,
-    TResult Function()? noActiveSubscription,
-    TResult Function()? userNeedVerification,
-    required TResult orElse(),
-  }) {
-    if (userNeedVerification != null) {
-      return userNeedVerification();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_ServerError value) serverError,
-    required TResult Function(_LostConnection value) lostConnection,
-    required TResult Function(_ExtraError value) extraError,
-    required TResult Function(NotAuthenticated value) notAuthenticated,
-    required TResult Function(NoActiveSubscription value) noActiveSubscription,
-    required TResult Function(UserNeedVerification value) userNeedVerification,
-  }) {
-    return userNeedVerification(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_ServerError value)? serverError,
-    TResult? Function(_LostConnection value)? lostConnection,
-    TResult? Function(_ExtraError value)? extraError,
-    TResult? Function(NotAuthenticated value)? notAuthenticated,
-    TResult? Function(NoActiveSubscription value)? noActiveSubscription,
-    TResult? Function(UserNeedVerification value)? userNeedVerification,
-  }) {
-    return userNeedVerification?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_ServerError value)? serverError,
-    TResult Function(_LostConnection value)? lostConnection,
-    TResult Function(_ExtraError value)? extraError,
-    TResult Function(NotAuthenticated value)? notAuthenticated,
-    TResult Function(NoActiveSubscription value)? noActiveSubscription,
-    TResult Function(UserNeedVerification value)? userNeedVerification,
-    required TResult orElse(),
-  }) {
-    if (userNeedVerification != null) {
-      return userNeedVerification(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class UserNeedVerification extends CoreFailure {
-  const factory UserNeedVerification() = _$UserNeedVerificationImpl;
-  const UserNeedVerification._() : super._();
 }
