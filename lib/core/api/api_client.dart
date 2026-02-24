@@ -40,7 +40,7 @@ class ApiClient implements BaseHttpMethodAdapter {
   Future<Either<CoreFailure, T>> post<T>({
     required String url,
     required NetworkDataParser<T> dataParser,
-    Map<String, dynamic>? body,
+    dynamic body,
     bool loginRequired = true,
   }) async {
     // final token = _getUserToken;
@@ -64,6 +64,7 @@ class ApiClient implements BaseHttpMethodAdapter {
   Future<Either<CoreFailure, T>> put<T>({
     required String url,
     required NetworkDataParser<T> dataParser,
+    Map<String, dynamic>? queryParameters,
     Object? body,
     bool loginRequired = true,
   }) async {
