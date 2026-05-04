@@ -38,7 +38,7 @@ class DioInterceptor extends QueuedInterceptor {
     }
     options.headers['content-type'] = HttpConfig.contentType;
     options.headers['Accept-Language'] = HttpConfig.acceptLanguage;
-    options.headers['api-version'] = apiVersion ?? HttpConfig.apiVersion;
+    options.headers['api-version'] = apiVersion ?? -1;
     options.headers['DeviceId'] = deviceID;
 
     return handler.next(options);
@@ -58,6 +58,9 @@ class DioInterceptor extends QueuedInterceptor {
     switch (err.response?.statusCode) {
       case 401:
         await delegate.onUnauthorized(err, handler);
+        break;
+      case 402:
+        delegate.onSubscriptionNeeded(err, handler);
         break;
       case 423:
         delegate.onBlocked();

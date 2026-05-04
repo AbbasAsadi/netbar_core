@@ -8,4 +8,6 @@ abstract class BaseApiErrorHandlerDelegate {
   void onBlocked();
 
   void onLegalRestriction({required String lastPath});
+
+  void onSubscriptionNeeded(DioException err, ErrorInterceptorHandler handler);
 }
