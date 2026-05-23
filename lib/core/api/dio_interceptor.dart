@@ -47,20 +47,27 @@ class DioInterceptor extends QueuedInterceptor {
   @override
   Future onError(DioException err, ErrorInterceptorHandler handler) async {
     LogError.showInterceptorAPIError(err);
+    //
+    // if (connectivityLost(err)) {
+    //   delegate.onInternetDisconnected();
+    //   return handler.reject(err);
+    // }
+    //
+    // if ((err.response?.statusCode ?? 500) == 504) {
+    //   delegate.onVpnConnected();
+    //   return handler.reject(err);
+    // }
     if ((err.response?.statusCode ?? 500) >= 500) {
       delegate.onServerError(err);
     }
 
-    if (connectivityLost(err)) {
-      return handler.reject(err);
-    }
 
     switch (err.response?.statusCode) {
       case 401:
         await delegate.onUnauthorized(err, handler);
-        break;
+        return;
       case 402:
-        delegate.onSubscriptionNeeded(err, handler);
+        delegate.onSubscriptionNeeded();
         break;
       case 423:
         delegate.onBlocked();
@@ -74,5 +81,6 @@ class DioInterceptor extends QueuedInterceptor {
   }
 
   static bool connectivityLost(DioException err) =>
-      err.type == DioExceptionType.unknown && err.error is SocketException;
+      (err.type == DioExceptionType.unknown || err.type == DioExceptionType.connectionTimeout || err.type == DioExceptionType.connectionError ) &&
+          (err.error is SocketException || err.error == null);
 }

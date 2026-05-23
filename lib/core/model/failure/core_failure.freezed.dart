@@ -21,34 +21,34 @@ mixin _$CoreFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() serverError,
     required TResult Function() lostConnection,
-    required TResult Function(int? statusCode, String? errorMessage) extraError,
+    required TResult Function(
+      int? statusCode,
+      String? errorMessage,
+      String? code,
+    )
+    extraError,
     required TResult Function() notAuthenticated,
     required TResult Function() noActiveSubscription,
   }) => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? serverError,
     TResult? Function()? lostConnection,
-    TResult? Function(int? statusCode, String? errorMessage)? extraError,
+    TResult? Function(int? statusCode, String? errorMessage, String? code)?
+    extraError,
     TResult? Function()? notAuthenticated,
     TResult? Function()? noActiveSubscription,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? serverError,
-
     TResult Function()? lostConnection,
-
-    TResult Function(int? statusCode, String? errorMessage)? extraError,
-
+    TResult Function(int? statusCode, String? errorMessage, String? code)?
+    extraError,
     TResult Function()? notAuthenticated,
-
     TResult Function()? noActiveSubscription,
-
     required TResult orElse(),
   }) => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ServerError value) serverError,
@@ -57,7 +57,6 @@ mixin _$CoreFailure {
     required TResult Function(NotAuthenticated value) notAuthenticated,
     required TResult Function(NoActiveSubscription value) noActiveSubscription,
   }) => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ServerError value)? serverError,
@@ -79,8 +78,10 @@ mixin _$CoreFailure {
 
 /// @nodoc
 abstract class $CoreFailureCopyWith<$Res> {
-  factory $CoreFailureCopyWith(CoreFailure value, $Res Function(CoreFailure) then) =
-      _$CoreFailureCopyWithImpl<$Res, CoreFailure>;
+  factory $CoreFailureCopyWith(
+    CoreFailure value,
+    $Res Function(CoreFailure) then,
+  ) = _$CoreFailureCopyWithImpl<$Res, CoreFailure>;
 }
 
 /// @nodoc
@@ -109,8 +110,10 @@ abstract class _$$ServerErrorImplCopyWith<$Res> {
 class __$$ServerErrorImplCopyWithImpl<$Res>
     extends _$CoreFailureCopyWithImpl<$Res, _$ServerErrorImpl>
     implements _$$ServerErrorImplCopyWith<$Res> {
-  __$$ServerErrorImplCopyWithImpl(_$ServerErrorImpl _value, $Res Function(_$ServerErrorImpl) _then)
-    : super(_value, _then);
+  __$$ServerErrorImplCopyWithImpl(
+    _$ServerErrorImpl _value,
+    $Res Function(_$ServerErrorImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of CoreFailure
   /// with the given fields replaced by the non-null parameter values.
@@ -140,7 +143,12 @@ class _$ServerErrorImpl extends _ServerError {
   TResult when<TResult extends Object?>({
     required TResult Function() serverError,
     required TResult Function() lostConnection,
-    required TResult Function(int? statusCode, String? errorMessage) extraError,
+    required TResult Function(
+      int? statusCode,
+      String? errorMessage,
+      String? code,
+    )
+    extraError,
     required TResult Function() notAuthenticated,
     required TResult Function() noActiveSubscription,
   }) {
@@ -152,7 +160,8 @@ class _$ServerErrorImpl extends _ServerError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? serverError,
     TResult? Function()? lostConnection,
-    TResult? Function(int? statusCode, String? errorMessage)? extraError,
+    TResult? Function(int? statusCode, String? errorMessage, String? code)?
+    extraError,
     TResult? Function()? notAuthenticated,
     TResult? Function()? noActiveSubscription,
   }) {
@@ -164,7 +173,8 @@ class _$ServerErrorImpl extends _ServerError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? serverError,
     TResult Function()? lostConnection,
-    TResult Function(int? statusCode, String? errorMessage)? extraError,
+    TResult Function(int? statusCode, String? errorMessage, String? code)?
+    extraError,
     TResult Function()? notAuthenticated,
     TResult Function()? noActiveSubscription,
     required TResult orElse(),
@@ -266,7 +276,12 @@ class _$LostConnectionImpl extends _LostConnection {
   TResult when<TResult extends Object?>({
     required TResult Function() serverError,
     required TResult Function() lostConnection,
-    required TResult Function(int? statusCode, String? errorMessage) extraError,
+    required TResult Function(
+      int? statusCode,
+      String? errorMessage,
+      String? code,
+    )
+    extraError,
     required TResult Function() notAuthenticated,
     required TResult Function() noActiveSubscription,
   }) {
@@ -278,7 +293,8 @@ class _$LostConnectionImpl extends _LostConnection {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? serverError,
     TResult? Function()? lostConnection,
-    TResult? Function(int? statusCode, String? errorMessage)? extraError,
+    TResult? Function(int? statusCode, String? errorMessage, String? code)?
+    extraError,
     TResult? Function()? notAuthenticated,
     TResult? Function()? noActiveSubscription,
   }) {
@@ -290,7 +306,8 @@ class _$LostConnectionImpl extends _LostConnection {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? serverError,
     TResult Function()? lostConnection,
-    TResult Function(int? statusCode, String? errorMessage)? extraError,
+    TResult Function(int? statusCode, String? errorMessage, String? code)?
+    extraError,
     TResult Function()? notAuthenticated,
     TResult Function()? noActiveSubscription,
     required TResult orElse(),
@@ -349,23 +366,32 @@ abstract class _LostConnection extends CoreFailure {
 
 /// @nodoc
 abstract class _$$ExtraErrorImplCopyWith<$Res> {
-  factory _$$ExtraErrorImplCopyWith(_$ExtraErrorImpl value, $Res Function(_$ExtraErrorImpl) then) =
-      __$$ExtraErrorImplCopyWithImpl<$Res>;
+  factory _$$ExtraErrorImplCopyWith(
+    _$ExtraErrorImpl value,
+    $Res Function(_$ExtraErrorImpl) then,
+  ) = __$$ExtraErrorImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({int? statusCode, String? errorMessage});
+  $Res call({int? statusCode, String? errorMessage, String? code});
 }
 
 /// @nodoc
-class __$$ExtraErrorImplCopyWithImpl<$Res> extends _$CoreFailureCopyWithImpl<$Res, _$ExtraErrorImpl>
+class __$$ExtraErrorImplCopyWithImpl<$Res>
+    extends _$CoreFailureCopyWithImpl<$Res, _$ExtraErrorImpl>
     implements _$$ExtraErrorImplCopyWith<$Res> {
-  __$$ExtraErrorImplCopyWithImpl(_$ExtraErrorImpl _value, $Res Function(_$ExtraErrorImpl) _then)
-    : super(_value, _then);
+  __$$ExtraErrorImplCopyWithImpl(
+    _$ExtraErrorImpl _value,
+    $Res Function(_$ExtraErrorImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of CoreFailure
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? statusCode = freezed, Object? errorMessage = freezed}) {
+  $Res call({
+    Object? statusCode = freezed,
+    Object? errorMessage = freezed,
+    Object? code = freezed,
+  }) {
     return _then(
       _$ExtraErrorImpl(
         statusCode: freezed == statusCode
@@ -376,6 +402,10 @@ class __$$ExtraErrorImplCopyWithImpl<$Res> extends _$CoreFailureCopyWithImpl<$Re
             ? _value.errorMessage
             : errorMessage // ignore: cast_nullable_to_non_nullable
                   as String?,
+        code: freezed == code
+            ? _value.code
+            : code // ignore: cast_nullable_to_non_nullable
+                  as String?,
       ),
     );
   }
@@ -384,16 +414,19 @@ class __$$ExtraErrorImplCopyWithImpl<$Res> extends _$CoreFailureCopyWithImpl<$Re
 /// @nodoc
 
 class _$ExtraErrorImpl extends _ExtraError {
-  const _$ExtraErrorImpl({this.statusCode, this.errorMessage}) : super._();
+  const _$ExtraErrorImpl({this.statusCode, this.errorMessage, this.code})
+    : super._();
 
   @override
   final int? statusCode;
   @override
   final String? errorMessage;
+  @override
+  final String? code;
 
   @override
   String toString() {
-    return 'CoreFailure.extraError(statusCode: $statusCode, errorMessage: $errorMessage)';
+    return 'CoreFailure.extraError(statusCode: $statusCode, errorMessage: $errorMessage, code: $code)';
   }
 
   @override
@@ -401,12 +434,15 @@ class _$ExtraErrorImpl extends _ExtraError {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ExtraErrorImpl &&
-            (identical(other.statusCode, statusCode) || other.statusCode == statusCode) &&
-            (identical(other.errorMessage, errorMessage) || other.errorMessage == errorMessage));
+            (identical(other.statusCode, statusCode) ||
+                other.statusCode == statusCode) &&
+            (identical(other.errorMessage, errorMessage) ||
+                other.errorMessage == errorMessage) &&
+            (identical(other.code, code) || other.code == code));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, statusCode, errorMessage);
+  int get hashCode => Object.hash(runtimeType, statusCode, errorMessage, code);
 
   /// Create a copy of CoreFailure
   /// with the given fields replaced by the non-null parameter values.
@@ -421,11 +457,16 @@ class _$ExtraErrorImpl extends _ExtraError {
   TResult when<TResult extends Object?>({
     required TResult Function() serverError,
     required TResult Function() lostConnection,
-    required TResult Function(int? statusCode, String? errorMessage) extraError,
+    required TResult Function(
+      int? statusCode,
+      String? errorMessage,
+      String? code,
+    )
+    extraError,
     required TResult Function() notAuthenticated,
     required TResult Function() noActiveSubscription,
   }) {
-    return extraError(statusCode, errorMessage);
+    return extraError(statusCode, errorMessage, code);
   }
 
   @override
@@ -433,11 +474,12 @@ class _$ExtraErrorImpl extends _ExtraError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? serverError,
     TResult? Function()? lostConnection,
-    TResult? Function(int? statusCode, String? errorMessage)? extraError,
+    TResult? Function(int? statusCode, String? errorMessage, String? code)?
+    extraError,
     TResult? Function()? notAuthenticated,
     TResult? Function()? noActiveSubscription,
   }) {
-    return extraError?.call(statusCode, errorMessage);
+    return extraError?.call(statusCode, errorMessage, code);
   }
 
   @override
@@ -445,13 +487,14 @@ class _$ExtraErrorImpl extends _ExtraError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? serverError,
     TResult Function()? lostConnection,
-    TResult Function(int? statusCode, String? errorMessage)? extraError,
+    TResult Function(int? statusCode, String? errorMessage, String? code)?
+    extraError,
     TResult Function()? notAuthenticated,
     TResult Function()? noActiveSubscription,
     required TResult orElse(),
   }) {
     if (extraError != null) {
-      return extraError(statusCode, errorMessage);
+      return extraError(statusCode, errorMessage, code);
     }
     return orElse();
   }
@@ -498,16 +541,22 @@ class _$ExtraErrorImpl extends _ExtraError {
 }
 
 abstract class _ExtraError extends CoreFailure {
-  const factory _ExtraError({final int? statusCode, final String? errorMessage}) = _$ExtraErrorImpl;
+  const factory _ExtraError({
+    final int? statusCode,
+    final String? errorMessage,
+    final String? code,
+  }) = _$ExtraErrorImpl;
   const _ExtraError._() : super._();
 
   int? get statusCode;
   String? get errorMessage;
+  String? get code;
 
   /// Create a copy of CoreFailure
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ExtraErrorImplCopyWith<_$ExtraErrorImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ExtraErrorImplCopyWith<_$ExtraErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -555,7 +604,12 @@ class _$NotAuthenticatedImpl extends NotAuthenticated {
   TResult when<TResult extends Object?>({
     required TResult Function() serverError,
     required TResult Function() lostConnection,
-    required TResult Function(int? statusCode, String? errorMessage) extraError,
+    required TResult Function(
+      int? statusCode,
+      String? errorMessage,
+      String? code,
+    )
+    extraError,
     required TResult Function() notAuthenticated,
     required TResult Function() noActiveSubscription,
   }) {
@@ -567,7 +621,8 @@ class _$NotAuthenticatedImpl extends NotAuthenticated {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? serverError,
     TResult? Function()? lostConnection,
-    TResult? Function(int? statusCode, String? errorMessage)? extraError,
+    TResult? Function(int? statusCode, String? errorMessage, String? code)?
+    extraError,
     TResult? Function()? notAuthenticated,
     TResult? Function()? noActiveSubscription,
   }) {
@@ -579,7 +634,8 @@ class _$NotAuthenticatedImpl extends NotAuthenticated {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? serverError,
     TResult Function()? lostConnection,
-    TResult Function(int? statusCode, String? errorMessage)? extraError,
+    TResult Function(int? statusCode, String? errorMessage, String? code)?
+    extraError,
     TResult Function()? notAuthenticated,
     TResult Function()? noActiveSubscription,
     required TResult orElse(),
@@ -670,7 +726,8 @@ class _$NoActiveSubscriptionImpl extends NoActiveSubscription {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$NoActiveSubscriptionImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$NoActiveSubscriptionImpl);
   }
 
   @override
@@ -681,7 +738,12 @@ class _$NoActiveSubscriptionImpl extends NoActiveSubscription {
   TResult when<TResult extends Object?>({
     required TResult Function() serverError,
     required TResult Function() lostConnection,
-    required TResult Function(int? statusCode, String? errorMessage) extraError,
+    required TResult Function(
+      int? statusCode,
+      String? errorMessage,
+      String? code,
+    )
+    extraError,
     required TResult Function() notAuthenticated,
     required TResult Function() noActiveSubscription,
   }) {
@@ -693,7 +755,8 @@ class _$NoActiveSubscriptionImpl extends NoActiveSubscription {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? serverError,
     TResult? Function()? lostConnection,
-    TResult? Function(int? statusCode, String? errorMessage)? extraError,
+    TResult? Function(int? statusCode, String? errorMessage, String? code)?
+    extraError,
     TResult? Function()? notAuthenticated,
     TResult? Function()? noActiveSubscription,
   }) {
@@ -705,7 +768,8 @@ class _$NoActiveSubscriptionImpl extends NoActiveSubscription {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? serverError,
     TResult Function()? lostConnection,
-    TResult Function(int? statusCode, String? errorMessage)? extraError,
+    TResult Function(int? statusCode, String? errorMessage, String? code)?
+    extraError,
     TResult Function()? notAuthenticated,
     TResult Function()? noActiveSubscription,
     required TResult orElse(),

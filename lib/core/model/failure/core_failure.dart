@@ -10,7 +10,7 @@ class CoreFailure with _$CoreFailure {
 
   const factory CoreFailure.lostConnection() = _LostConnection;
 
-  const factory CoreFailure.extraError({int? statusCode, String? errorMessage}) = _ExtraError;
+  const factory CoreFailure.extraError({int? statusCode, String? errorMessage, String? code}) = _ExtraError;
 
   const factory CoreFailure.notAuthenticated() = NotAuthenticated;
 

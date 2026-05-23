@@ -34,7 +34,8 @@ extension ApiProcessRequestExtension on DioException {
         } else {
           errorMessage = 'مشکلی پیش آمده. لطفا با پشتیبانی تماس بگیرید.';
         }
-        return CoreFailure.extraError(statusCode: response?.statusCode, errorMessage: errorMessage);
+        final String? code = data?['code'];
+        return CoreFailure.extraError(statusCode: response?.statusCode, errorMessage: errorMessage, code: code);
       }
     }
   }

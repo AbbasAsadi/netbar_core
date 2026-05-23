@@ -9,5 +9,9 @@ abstract class BaseApiErrorHandlerDelegate {
 
   void onLegalRestriction({required String lastPath});
 
-  void onSubscriptionNeeded(DioException err, ErrorInterceptorHandler handler);
+  void onSubscriptionNeeded();
+
+  // void onInternetDisconnected();
+  //
+  // void onVpnConnected();
 }
